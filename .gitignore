@@ -1,0 +1,16 @@
+# OS が作るゴミファイル
+.DS_Store
+Thumbs.db
+
+# エディタ設定
+.vscode/
+.idea/
+
+# 依存パッケージ・ビルド生成物
+node_modules/
+*.log
+
+# バックアップ・一時ファイル
+*.bak
+*.tmp
+bkup/

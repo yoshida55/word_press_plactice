@@ -1,0 +1,83 @@
+/* ┌─────────────────────────────────────────┐
+   │ 共通                                      │
+   └─────────────────────────────────────────┘ */
+
+/* ┌─────────────────────────────────────────┐
+   │ 商品一覧                                  │
+   └─────────────────────────────────────────┘ */
+
+.product {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* 商品を並べる親：4列で横に並べる（grid） */
+.product_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem 2.5rem;
+}
+
+.product_item {
+  display: block;
+  text-align: right;
+  border: 1px solid black;
+}
+
+/* 商品画像：セルいっぱいの正方形に切り抜く */
+.product_img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover; /* はみ出しをトリミングして正方形に収める */
+  height: auto;
+}
+
+.product_title {
+  margin-top: 1rem;
+  color: #333333;
+}
+
+.product_price {
+  margin-top: 0.4rem;
+  font-size: 1.3rem;
+  color: #666666;
+}
+
+#product_link {
+  position: relative;
+  margin-top: 3rem;
+}
+
+/* 戻るリンク */
+.product_back {
+  display: block;
+
+  text-decoration: underline;
+
+  color: black;
+}
+
+/* もっと見る：中央に配置 */
+.product_more {
+  display: inline-block;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: fit-content;
+  color: #333333;
+}
+
+/* ５番目以降を消す */
+.product_item:nth-child(n + 5) {
+  display: none;
+}
+
+/* ボタンが押された場合表示する */
+.product_item.show {
+  display: block;
+}

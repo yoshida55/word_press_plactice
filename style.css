@@ -1,0 +1,75 @@
+/*
+Theme Name:  mystore
+Description: mystoreのテーマです。
+Version: 1.0
+*/
+
+/* 使用フォント */
+:root {
+  --NotoSans: "Noto Sans JP", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--NotoSans);
+  position: relative;
+  overflow-x: hidden;
+  /* background: var(--gray-light); */
+}
+
+html {
+  /* ★　画面幅1260pxで10px*　それ以上だとそのpxそれ以下だとアートボードのサイズによってかわる */
+  font-size: min(calc(10 / 1400 * 100vw), 10px);
+  color: var(--text);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.pc_only {
+  display: block;
+}
+
+.sp_only {
+  display: none;
+}
+
+/*fade表示関連*/
+
+.fade_in {
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0, 0.42, 0.58, 1);
+}
+
+.fade_up {
+  transform: translateY(2vw);
+  opacity: 0;
+  transition: all 1.2s cubic-bezier(0, 0.42, 0.58, 1);
+}
+
+.fade_in.show {
+  opacity: 1;
+}
+
+.fade_up.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: calc(10 / 375 * 100vw);
+    /* 画面幅390pxで10px*/
+  }
+
+  .pc_only {
+    display: none;
+  }
+
+  .sp_only {
+    display: block;
+  }
+}
