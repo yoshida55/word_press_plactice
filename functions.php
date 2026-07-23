@@ -6,6 +6,7 @@ function mystore_files()
     wp_enqueue_style('mystore-reset', get_template_directory_uri() . '/css/reset.css');
     wp_enqueue_style('mystore-main', get_stylesheet_uri()); // テーマ直下の style.css
     wp_enqueue_style('mystore-index', get_template_directory_uri() . '/css/index.css');
+    wp_enqueue_style('mystore-detail', get_template_directory_uri() . '/css/detail.css');
 
     // JS（最後の true = </body>直前で読む）
     wp_enqueue_script('mystore-index', get_template_directory_uri() . '/js/index.js', array(), false, true);
