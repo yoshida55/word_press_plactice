@@ -30,9 +30,11 @@
 /* 商品画像：セルいっぱいの正方形に切り抜く */
 .product_img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   object-fit: cover; /* はみ出しをトリミングして正方形に収める */
   height: auto;
+
+  object-position: 90% top; /* 右上を基準にトリミングする */
 }
 
 .product_title {
@@ -62,4 +64,12 @@
 /* ボタンが押された場合表示する */
 .product_item.show {
   display: block;
+}
+
+.product_link {
+  margin-top: 3rem;
+  text-align: center;
+  display: block;
+  color: rgb(61, 108, 196);
+  text-decoration: underline;
 }
