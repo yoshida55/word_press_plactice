@@ -9,10 +9,10 @@
 
     <ul class="product_list">
       <!-- ループで商品があるだけ表示するPHP -->
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
           <li class="product_item">
             <!-- もしもサムネイルがある場合 -->
-            <?php if ( has_post_thumbnail() ) : ?>
+            <?php if (has_post_thumbnail()) : ?>
               <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('medium', array('class' => 'product_img')); ?>
               </a>
@@ -20,10 +20,10 @@
             <p class="product_title"><?php the_title(); ?></p>
             <!-- 価格などのカスタムフィールドがある場合はここで出力 -->
             <p class="product_price">¥99,999 +tax</p>
-            <!-- <a class="product_link" href="detail.html">View Detail</a> -->
             <a class="product_link" href="<?php the_permalink(); ?>">View Detail</a>
           </li>
-      <?php endwhile; endif; ?>
+        <?php endwhile;
+      endif; ?>
     </ul>
 
     <!-- 
