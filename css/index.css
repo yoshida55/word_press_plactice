@@ -45,6 +45,12 @@
   color: #666666;
 }
 
+/* View Details */
+.product_link_detail {
+  display: block;
+  text-align: center;
+}
+
 #product_link {
   position: relative;
   margin-top: 3rem;

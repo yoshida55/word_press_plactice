@@ -20,7 +20,7 @@
             <p class="product_title"><?php the_title(); ?></p>
             <!-- 価格などのカスタムフィールドがある場合はここで出力 -->
             <p class="product_price">¥99,999 +tax</p>
-            <a class="product_link" href="<?php the_permalink(); ?>">View Detail</a>
+            <a class="product_link_detail" href="<?php the_permalink(); ?>">View Detail</a>
           </li>
         <?php endwhile;
       endif; ?>
