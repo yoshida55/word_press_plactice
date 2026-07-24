@@ -57,6 +57,7 @@
   text-decoration: underline;
 
   color: black;
+  border: 0.5rem solid red;
 }
 
 /* もっと見る：中央に配置 */
